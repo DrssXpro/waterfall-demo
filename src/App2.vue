@@ -93,8 +93,5 @@ const getData = (page: number, pageSize: number) => {
     height: 600px;
     border: 1px solid red;
   }
-  .box {
-    width: 250px;
-  }
 }
 </style>

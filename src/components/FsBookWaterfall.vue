@@ -121,7 +121,7 @@ const computedRealDomPos = (list: ICardItem[]) => {
       state.cardPos[nextIndex] = {
         ...state.cardPos[nextIndex],
         cardHeight: cardHeight,
-        x: minIndex % props.column !== 0 ? minIndex * (state.cardWidth + props.gap) : 0,
+        x: minIndex ? minIndex * (state.cardWidth + props.gap) : 0,
         y: minHeight,
       };
       state.columnHeight[minIndex] += cardHeight + props.gap;

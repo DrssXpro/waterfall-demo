@@ -89,7 +89,7 @@ const computedCardPos = (list: ICardItem[]) => {
       state.cardPos.push({
         width: state.cardWidth,
         height: cardHeight,
-        x: index % props.column !== 0 ? index * (state.cardWidth + props.gap) : 0,
+        x: index ? index * (state.cardWidth + props.gap) : 0,
         y: 0,
       });
       state.columnHeight[index] = cardHeight + props.gap;
@@ -98,7 +98,7 @@ const computedCardPos = (list: ICardItem[]) => {
       state.cardPos.push({
         width: state.cardWidth,
         height: cardHeight,
-        x: minIndex % props.column !== 0 ? minIndex * (state.cardWidth + props.gap) : 0,
+        x: minIndex ? minIndex * (state.cardWidth + props.gap) : 0,
         y: minHeight,
       });
       state.columnHeight[minIndex] += cardHeight + props.gap;
